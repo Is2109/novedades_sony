@@ -1,0 +1,244 @@
+*{
+    margin:0;
+    padding: 0;
+    border: 0;
+    box-sizing:border-box;
+}
+li{
+    list-style: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    display: block;
+}
+p a {
+    display: inline;
+}
+img , svg{
+    display: block;
+    width: 100%;
+    height: initial;
+}
+h1 , h2 , h3 , h4 , h5 , h6 , p , strong , em , mark , a{
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    color:inherit;
+    text-decoration: none;
+    background-color: inherit;
+}
+:root{
+    font-size: 100%;
+}
+
+h1, h2, h3, span, .Main-numero{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+h2{
+    font-size: .75rem;
+    line-height: 1.125em;
+    color: #2F353D;
+}
+
+h3{
+    font-size: 15px;
+    color: #2F353D;
+    font-weight: 500;
+}
+
+.Main-numero, .Main-iva{
+    font-size: .75rem;
+    color: #6B6B7B
+}
+
+.Main-desde{
+    font-size: .875rem;
+    color: #6B6B7B
+}
+
+.Main-valor{
+    font-size: .9375rem;
+    color: #6B6B7B;
+}
+
+.Main-grid{
+    background-color: white;
+    width: 100%;
+
+    gap: 2.5rem;
+    padding: 5% 12%;
+
+    display: grid;
+    grid-template-columns: repeat( 6 , 1fr );
+}
+
+.Main-h1{
+    background-color: #0279AC;
+    padding: 2.5rem 1.25rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    grid-column: span 3;
+
+    color: white;
+    font-size: 1.625rem;
+    font-weight: 700;
+}
+
+.Main-img--auriculares{
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+.Main-producto--auriculares{
+    grid-column: span 2;
+}
+
+.Main-img{
+    width: 100%;
+    min-height: 100%;
+}
+
+.Main-producto{
+    gap: 10px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.Main-modelo{
+    gap: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Main-rating{
+    gap: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* ----------------------------- */
+
+@media (max-width:1000px){
+    .Main-grid{
+        grid-template-columns: repeat( 3 , 1fr );
+    }
+    .Main-h1{
+        order: 1;
+    }
+    .Main-img--hibrida{
+        order: 2;
+    }
+    .Main-img--vlogging{
+        order: 3;
+    }
+    .Main-img--FE{
+        order: 4;
+    }
+    .Main-producto--hibrida{
+        order: 5;
+    }
+    .Main-producto--vlogging{
+        order: 6;
+    }
+    .Main-producto--FE{
+        order: 7;
+    }
+    .Main-img--auriculares{
+        order: 8;
+        grid-column: span 3;
+        grid-row: span 2;
+    }
+    .Main-producto--auriculares{
+        order: 9;
+        grid-column: span 3;
+        grid-row: span 2;
+    }
+}
+
+@media (max-width:768px){
+    .Main-grid{
+        grid-template-columns: repeat( 2 , 1fr );
+    }
+    .Main-h1{
+        grid-column: span 2;
+        order: 1;
+    }
+    .Main-img--hibrida{
+        order: 2;
+    }    
+    .Main-img--vlogging{
+        order: 3;
+    }
+    .Main-producto--hibrida{
+        order: 4;
+    }
+    .Main-producto--vlogging{
+        order: 5;
+    }
+    .Main-img--FE{
+        order: 6;
+    }
+    .Main-img--auriculares{
+        grid-column: span 1;
+        grid-row: span 1;
+        order: 7;
+    }
+    .Main-producto--FE{
+        order: 8;
+    }
+    .Main-producto--auriculares{
+        grid-column: span 1;
+        grid-row: span 1;
+        order: 9;
+    }
+}
+
+@media (max-width:480px){
+    .Main-grid{
+        display: flex;
+        flex-direction: column;
+    }
+    .Main-h1{
+        order: 1;
+    }
+    .Main-img--hibrida{
+        order: 2;
+    }
+    .Main-producto--hibrida{
+        order: 3;
+    }    
+    .Main-img--vlogging{
+        order: 4;
+    }
+    .Main-producto--vlogging{
+        order: 5;
+    }
+    .Main-img--FE{
+        order: 6;
+    }
+    .Main-producto--FE{
+        order: 7;
+    }
+    .Main-img--auriculares{
+        order: 8;
+    }
+    .Main-producto--auriculares{
+        order: 9;
+    }
+}
